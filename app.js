@@ -39,10 +39,6 @@
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        console.log(document.getElementById("posts").childNodes.length);
-        // if (document.getElementById("posts").childNodes.length > 3) {
-        //   clearExistingList();
-        // }
         clearExistingList();
         for (let i = 0; i < data.data.children.length; i++) {
           const newElement = createPostElement(
