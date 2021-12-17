@@ -40,7 +40,7 @@
       .then((data) => {
         console.log(data);
         clearExistingList();
-        saveSubredditsToLocalStorage();
+        //saveSubredditsToLocalStorage();
         for (let i = 0; i < data.data.children.length; i++) {
           const newElement = createPostElement(
             data.data.children[i].data.title,
@@ -63,15 +63,15 @@
 
   // clear the existing list of posts
   function clearExistingList() {
-    document.getElementById("posts").innerHTML = posts;
-    posts.innerText = " ";
+    //var posts = document.getElementById("posts");
+    posts.innerHTML = " ";
   }
 
   // save the users subreddits to localstorage
   function saveSubredditsToLocalStorage() {
-    const subredditInput = document.getElementById("subredditInput");
-    //const list = document.getElementById("posts");
-    localStorage.setItem("list", JSON.stringify(subredditInput.value));
+    // const subredditInput = document.getElementById("subredditInput");
+    // //const list = document.getElementById("posts");
+    // localStorage.setItem("list", JSON.stringify(subredditInput.value));
   }
 
   // read the users subreddits from localstorage
